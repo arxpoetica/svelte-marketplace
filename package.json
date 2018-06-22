@@ -1,7 +1,12 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "svelte-marketplace",
+  "description": "A marketplace for Svelte components",
   "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arxpoetica/svelte-marketplace"
+  },
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build",
@@ -12,7 +17,8 @@
     "test": "run-p --race dev cy:run"
   },
   "dependencies": {
-    "compression": "^1.7.1",
+    "compression": "1.7.2",
+    "dotenv-extended": "2.0.2",
     "polka": "^0.4.0",
     "sapper": "^0.13.0",
     "sirv": "^0.1.1"

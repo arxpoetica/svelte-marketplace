@@ -1,3 +1,6 @@
+import dotenv from 'dotenv-extended'
+let env = dotenv.load()
+
 import sirv from 'sirv';
 import polka from 'polka';
 import sapper from 'sapper';
@@ -12,6 +15,10 @@ polka() // You can also use Express
 		sapper({ routes, App })
 	)
 	.listen(process.env.PORT)
+	.then(_ => {
+		console.log('\n    Svelte Component Marketplace')
+		console.log('    ----------------------------------- > > >\n')
+	})
 	.catch(err => {
 		console.log('error', err);
 	})
