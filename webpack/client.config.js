@@ -8,19 +8,18 @@ module.exports = {
 	entry: config.client.entry(),
 	output: config.client.output(),
 	resolve: {
-		extensions: ['.js', '.json', '.html']
+		extensions: ['.js', '.json', '.html'],
+		mainFields: ['svelte', 'module', 'browser', 'main']
 	},
 	module: {
 		rules: [
 			{
 				test: /\.html$/,
-				exclude: /node_modules/,
 				use: {
 					loader: 'svelte-loader',
 					options: {
+						dev: isDev,
 						hydratable: true,
-						cascade: false,
-						store: true,
 						hotReload: true
 					}
 				}
